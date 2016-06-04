@@ -194,6 +194,7 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\Proje
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\bin\Debug\RestSharp.xml
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\bin\Debug\Yandex.Translator.pdb
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\bin\Debug\Yandex.Translator.xml
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmStatistical.resources
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmMemberActivities.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmStatisticalNation.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.csprojResolveAssemblyReference.cache

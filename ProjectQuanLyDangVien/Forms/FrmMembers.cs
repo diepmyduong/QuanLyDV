@@ -45,7 +45,6 @@ namespace ProjectQuanLyDangVien.Forms
             _frmParent.iDelete.Enabled = true;
             _frmParent.iReLoad.Enabled = true;
             _frmParent.iSave.Enabled = true;
-            _frmParent.iPrint.Enabled = true;
             _frmParent.iDetail.Enabled = true;
             _frmParent.iFind.Enabled = true;
 
@@ -80,24 +79,11 @@ namespace ProjectQuanLyDangVien.Forms
                         gridView1.ShowFindPanel();
                     }
                     break;
-                case "pageDetail":
-                    break;
             }
         }
         #region Exports
         protected override void OnExport()
         {
-            //switch (xtraTabControl1.SelectedTabPage.Name)
-            //{
-            //    case "pageLayout":
-
-            //        break;
-            //    case "pageTable":
-                    
-            //        break;
-            //    case "pageDetail":
-            //        break;
-            //}
         }
         private void IExportToXlsx_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -124,8 +110,6 @@ namespace ProjectQuanLyDangVien.Forms
                             process.Start();
                         }
                     }
-                    break;
-                case "pageDetail":
                     break;
             }
         }
@@ -156,8 +140,6 @@ namespace ProjectQuanLyDangVien.Forms
                         }
                     }
                     break;
-                case "pageDetail":
-                    break;
             }
         } 
         #endregion
@@ -177,44 +159,11 @@ namespace ProjectQuanLyDangVien.Forms
                         }
                     }
                     break;
-                case "pageDetail":
-                    break;
-            }
-        }
-        protected override void OnPrint()
-        {
-            switch (xtraTabControl1.SelectedTabPage.Name)
-            {
-                case "pageLayout":
-                    break;
-                case "pageTable":
-                    gridView1.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
-                    gridView1.ShowPrintPreview();
-                    gridView1.OptionsSelection.MultiSelectMode = GridMultiSelectMode.CheckBoxRowSelect;
-                    break;
-                case "pageDetail":
-                    dataLayoutControl1.ShowPrintPreview();
-                    break;
             }
         }
         protected override void OnNew()
         {
             _frmParent.openNewMemberForm();
-            //switch (xtraTabControl1.SelectedTabPage.Name)
-            //{
-            //    case "pageLayout":
-            //        layoutView1.AddNewRow();
-            //        layoutView1.FocusedColumn = layoutView1.Columns.ColumnByFieldName("SoTheDangVien");
-            //        break;
-            //    case "pageTable":
-            //        gridView1.AddNewRow();
-            //        break;
-            //    case "pageDetail":
-            //        tbDangVienBindingSource1.AddNew();
-            //        var items = dataLayoutControl1.Items.FindByName("SoTheDangVienTextEdit");
-            //        SoTheDangVienTextEdit.Focus();
-            //        break;
-            //}
         }
         protected override void OnReload()
         {
@@ -222,10 +171,11 @@ namespace ProjectQuanLyDangVien.Forms
             {
                 _frmParent.splashScreenManager.ShowWaitForm();
             }
+            //Bỏ focus để update dữ liệu
             var tempFocus = gridView1.FocusedRowHandle;
             gridView1.FocusedRowHandle = -1;
             gridView1.FocusedRowHandle = tempFocus;
-
+            // Kiểm tra có dữ liệu được cập nhật chưa
             var dtChange = this._Project_QLDVDataSet.tbDangVien.GetChanges() as _Project_QLDVDataSet.tbDangVienDataTable;
             if (dtChange != null)
             {
@@ -235,16 +185,18 @@ namespace ProjectQuanLyDangVien.Forms
                     OnSave();
                 }
             }
+            //Gọi bộ đếm thời gian thực hiện load
             Stopwatch sw = Stopwatch.StartNew();
-            
-            StopAllLoad();
+            StopAllLoad(); // Tắt tất cả các thread load hình
             this.tbSysTonGiaoTableAdapter.Fill(this._Project_QLDVDataSet.tbSysTonGiao); // Load Tôn giáo
             this.tbSysDanTocTableAdapter.Fill(this._Project_QLDVDataSet.tbSysDanToc); // Load Dân tộc
             this.tbSysTinhThanhTableAdapter.Fill(this._Project_QLDVDataSet.tbSysTinhThanh); //Load tỉnh thành
             this.tbDangVienTableAdapter.Fill(this._Project_QLDVDataSet.tbDangVien); //Load Đảng viên
+            // Lưu lại đảng viên hiện tại đang thao tác
             _currentDangVien = layoutView1.GetDataRow(layoutView1.VisibleRecordIndex) as _Project_QLDVDataSet.tbDangVienRow;
+            //Gọi thread load hình ảnh
             loadPicture();
-            sw.Stop();
+            sw.Stop(); //ngững đồng hồ đếm và thông báo thời gian thực hiện
             _frmParent.setFormStatus(string.Format("Time taken: {0}ms", sw.Elapsed.TotalMilliseconds));
             if (_frmParent.splashScreenManager.IsSplashFormVisible)
             {
@@ -253,6 +205,7 @@ namespace ProjectQuanLyDangVien.Forms
         }
         protected override void OnSave()
         {
+            //Bỏ focus để cập nhật dữ liệu
             var tempFocus = gridView1.FocusedRowHandle;
             gridView1.FocusedRowHandle = -1;
             gridView1.FocusedRowHandle = tempFocus;
@@ -276,11 +229,6 @@ namespace ProjectQuanLyDangVien.Forms
             switch (xtraTabControl1.SelectedTabPage.Name)
             {
                 case "pageLayout":
-                    //if (layoutView1.IsNewItemRow(layoutView1.FocusedRowHandle))
-                    //{
-                    //    layoutView1.CancelUpdateCurrentRow();
-                    //    return;
-                    //}
                     dangvien = layoutView1.GetFocusedDataRow() as _Project_QLDVDataSet.tbDangVienRow;
                     // Hỏi trước khi xóa
                     result = XtraMessageBox.Show(string.Format("Bạn có muốn xóa \"{0}\" không?",dangvien.HoTenDangDung), "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -319,29 +267,11 @@ namespace ProjectQuanLyDangVien.Forms
                         }
                     }
                     break;
-                //case "pageDetail":
-                //    if((tbDangVienBindingSource1.Current as DataRowView).IsNew)
-                //    {
-                //        layoutView1.CancelUpdateCurrentRow();
-                //        return;
-                //    } 
-                //    // Hỏi trước khi xóa
-                //    result = XtraMessageBox.Show(string.Format("Bạn có muốn xóa \"{0}\" không?", _currentDangVien.HoTenDangDung), "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                //    if (result == DialogResult.Yes)
-                //    {
-                //        _currentDangVien.Delete();
-                //        OnSave();
-                //    }
-                //    break;
             }
         }
         public override void OnClose()
         {
-            if(ActiveControl.Name == "dataLayoutControl1")
-            {
-                dataLayoutControl1.Validate();
-                dataLayoutControl1.BindingContext[tbDangVienBindingSource1].EndCurrentEdit();
-            }
+            //Kiểm tra có dữ liệu được cập nhật không
             var dtChange = this._Project_QLDVDataSet.tbDangVien.GetChanges() as _Project_QLDVDataSet.tbDangVienDataTable;
             if (dtChange != null)
             {
@@ -363,8 +293,6 @@ namespace ProjectQuanLyDangVien.Forms
         #region Sự kiện chính
         private void FrmMembers_Load_1(object sender, EventArgs e)
         {
-            cbBonus.Items.AddEnum(typeof(Libs.Enums.Bonus), true); // Loại khen thưởng
-            cbArmorial.Items.AddEnum(typeof(Libs.Enums.ArmorialYear), true); // Số huy hiệu
             cbGenger.Items.AddEnum(typeof(Libs.Enums.Genger), true); // Giới tính
             cbGenger2.Items.AddEnum(typeof(Libs.Enums.Genger), true); // Giới tính
             OnReload();
@@ -376,11 +304,6 @@ namespace ProjectQuanLyDangVien.Forms
             {
                 case "pageLayout":
                     layoutView1.VisibleRecordIndex = tbDangVienBindingSource1.Position;
-                    if(e.PrevPage.Name == "pageDetail")
-                    {
-                        dataLayoutControl1.BindingContext[tbDangVienBindingSource1].EndCurrentEdit();
-                        OnSave();
-                    }
                     if (_currentDangVien != null && _currentDangVien.HinhAnh == null)
                     {
                         loadPicture();
@@ -391,86 +314,10 @@ namespace ProjectQuanLyDangVien.Forms
                     {
                         tbDangVienBindingSource1.Position = layoutView1.GetFocusedDataSourceRowIndex();
                     }
-                    if(e.PrevPage.Name == "pageDetail")
-                    {
-                        dataLayoutControl1.BindingContext[tbDangVienBindingSource1].EndCurrentEdit();
-                        OnSave();
-                    }
                     if (layoutView1.IsFindPanelVisible)
                     {
                         layoutView1.FindFilterText = "";
                     }
-                    break;
-                case "pageDetail":
-                    if (e.PrevPage.Name == "pageLayout")
-                    {
-                        tbDangVienBindingSource1.Position = layoutView1.GetFocusedDataSourceRowIndex();
-                    }
-                    _currentDangVien = (tbDangVienBindingSource1.Current as DataRowView).Row as _Project_QLDVDataSet.tbDangVienRow;
-                    if (_currentDangVien != null && _currentDangVien.HinhAnh == null) // Load hình nếu chưa có hình
-                    {
-                        loadPicture();
-                    }
-                    // Chuyển về tab quá trình hoạt động
-                    if (xtraTabControl2.SelectedTabPageIndex != 0) 
-                    {
-                        xtraTabControl2.SelectedTabPageIndex = 0;
-                    }
-                    else
-                    {
-                        this.tbQuaTrinhHoatDongTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbQuaTrinhHoatDong, _currentDangVien.SoTheDangVien);
-                    }
-                    if (layoutView1.IsFindPanelVisible)
-                    {
-                        layoutView1.FindFilterText = "";
-                    }
-                    break;
-
-            }
-        }
-        private void xtraTabControl2_SelectedPageChanged(object sender, TabPageChangedEventArgs e)
-        {
-            // chọn tab nào mới load tab đó
-            switch (xtraTabControl2.SelectedTabPage.Name)
-            {
-                case "pageProcess": //Quá trình hoạt động
-                    this.tbQuaTrinhHoatDongTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbQuaTrinhHoatDong, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageTrainning": //Quá trình đào tạo, bồi dưỡng
-                    this.tbDaoTaoTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbDaoTao, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageBonus": //Khen thưởng
-                    this.tbKhenThuongTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbKhenThuong, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageArmorial": //So Huy hiệu
-                    this.tbSoHuyHieuTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbSoHuyHieu, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageStylized": //Danh hiệu
-                    this.tbDanhHieuTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbDanhHieu, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageDiscipline": //Kỷ luật
-                    this.tbKyLuatTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbKyLuat, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageJailed": // Bắt tù, bị tù
-                    this.tbBiTuTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbBiTu, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageOldJobs": // Công việc cũ
-                    this.tbCongViecCheDoCuTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbCongViecCheDoCu, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageForeign": //Đi nước ngoài
-                    this.tbDiNuocNgoaiTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbDiNuocNgoai, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageForeignRelationship": // Quan hệ nước ngoài
-                    this.tbQuanHeNuocNgoaiTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbQuanHeNuocNgoai, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageForeignFamily": //Thân nhân nước ngoài
-                    this.tbThanNhanNuocNgoaiTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbThanNhanNuocNgoai, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageFamily": // Quan hệ gia đình
-                    this.tbThanNhanTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbThanNhan, _currentDangVien.SoTheDangVien);
-                    break;
-                case "pageAsset": // Tài sản
-                    this.tbTaiSanTableAdapter.FillByDangVien(this._Project_QLDVDataSet.tbTaiSan, _currentDangVien.SoTheDangVien);
                     break;
             }
         }
@@ -495,7 +342,6 @@ namespace ProjectQuanLyDangVien.Forms
                 loadPicture();
             }
             layoutView1.FocusedRowHandle = e.VisibleRecordIndex;
-            Console.WriteLine(string.Format("focus: {0} & visibleIndex: {1}", layoutView1.FocusedRowHandle, e.VisibleRecordIndex));
         }
         private void uploadPicture(_Project_QLDVDataSet.tbDangVienRow data, byte[] source)
         {
@@ -563,337 +409,6 @@ namespace ProjectQuanLyDangVien.Forms
         {
             OnSave();
         }
-        #endregion
-
-        #region Quản lý tabDetail
-        private void gridViewDetails_InitNewRow(object sender, InitNewRowEventArgs e)
-        {
-            var gridview = sender as GridView;
-            gridview.SetRowCellValue(e.RowHandle, gridview.Columns["SoTheDangVien"], _currentDangVien.SoTheDangVien);
-        }
-
-            #region Quá trinh hoạt động
-        // Sau khi quá trinh hoạt động cập nhật
-        private void gridView3_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-            //Lấy dữ liệu người dùng thay đổi trong grid
-            var dtChange = this._Project_QLDVDataSet.tbQuaTrinhHoatDong.GetChanges() as _Project_QLDVDataSet.tbQuaTrinhHoatDongDataTable;
-            if (dtChange == null) return;
-            try
-            {
-                tbQuaTrinhHoatDongTableAdapter.Update(dtChange);
-                _Project_QLDVDataSet.tbQuaTrinhHoatDong.AcceptChanges();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
-            #region Đào tạo và bồi dưỡng
-            private void gridView4_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbDaoTao.GetChanges() as _Project_QLDVDataSet.tbDaoTaoDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbDaoTaoTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbDaoTao.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-            #endregion
-
-            #region Khen Thưởng
-        private void gridView5_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-            //Lấy dữ liệu người dùng thay đổi trong grid
-            var dtChange = this._Project_QLDVDataSet.tbKhenThuong.GetChanges() as _Project_QLDVDataSet.tbKhenThuongDataTable;
-            if (dtChange == null) return;
-            try
-            {
-                tbKhenThuongTableAdapter.Update(dtChange);
-                _Project_QLDVDataSet.tbKhenThuong.AcceptChanges();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
-            #region Số Huy Hiệu
-        private void gridView6_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-            //Lấy dữ liệu người dùng thay đổi trong grid
-            var dtChange = this._Project_QLDVDataSet.tbSoHuyHieu.GetChanges() as _Project_QLDVDataSet.tbSoHuyHieuDataTable;
-            if (dtChange == null) return;
-            try
-            {
-                tbSoHuyHieuTableAdapter.Update(dtChange);
-                _Project_QLDVDataSet.tbSoHuyHieu.AcceptChanges();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
-            #region Danh Hiệu
-        private void gridView7_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-            //Lấy dữ liệu người dùng thay đổi trong grid
-            var dtChange = this._Project_QLDVDataSet.tbDanhHieu.GetChanges() as _Project_QLDVDataSet.tbDanhHieuDataTable;
-            if (dtChange == null) return;
-            try
-            {
-                tbDanhHieuTableAdapter.Update(dtChange);
-                _Project_QLDVDataSet.tbDanhHieu.AcceptChanges();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
-            #region Kỷ luật
-        private void gridView8_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-            //Lấy dữ liệu người dùng thay đổi trong grid
-            var dtChange = this._Project_QLDVDataSet.tbKyLuat.GetChanges() as _Project_QLDVDataSet.tbKyLuatDataTable;
-            if (dtChange == null) return;
-            try
-            {
-                tbKyLuatTableAdapter.Update(dtChange);
-                _Project_QLDVDataSet.tbKyLuat.AcceptChanges();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message);
-            }
-        }
-        #endregion
-
-            #region Bị bắt, bị tù
-            private void gridView9_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbBiTu.GetChanges() as _Project_QLDVDataSet.tbBiTuDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbBiTuTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbBiTu.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-            #endregion
-
-            #region Công việc cũ
-            private void gridView10_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbCongViecCheDoCu.GetChanges() as _Project_QLDVDataSet.tbCongViecCheDoCuDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbCongViecCheDoCuTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbCongViecCheDoCu.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-            #endregion
-
-            #region Đi nước ngoài
-            private void gridView11_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbDiNuocNgoai.GetChanges() as _Project_QLDVDataSet.tbDiNuocNgoaiDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbDiNuocNgoaiTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbDiNuocNgoai.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-            #endregion
-
-            #region Quan hệ nước ngoài
-            private void gridView12_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbQuanHeNuocNgoai.GetChanges() as _Project_QLDVDataSet.tbQuanHeNuocNgoaiDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbQuanHeNuocNgoaiTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbQuanHeNuocNgoai.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-            #endregion
-
-            #region Thân nhân nước ngoài
-            private void gridView13_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbThanNhanNuocNgoai.GetChanges() as _Project_QLDVDataSet.tbThanNhanNuocNgoaiDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbThanNhanNuocNgoaiTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbThanNhanNuocNgoai.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-            #endregion
-
-            #region Quan hệ gia đình
-            private void gridView14_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbThanNhan.GetChanges() as _Project_QLDVDataSet.tbThanNhanDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbThanNhanTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbThanNhan.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-            #endregion
-
-            #region tài sản
-            private void gridView15_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-            {
-                //Lấy dữ liệu người dùng thay đổi trong grid
-                var dtChange = this._Project_QLDVDataSet.tbTaiSan.GetChanges() as _Project_QLDVDataSet.tbTaiSanDataTable;
-                if (dtChange == null) return;
-                try
-                {
-                    tbTaiSanTableAdapter.Update(dtChange);
-                    _Project_QLDVDataSet.tbTaiSan.AcceptChanges();
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-
-
-        #endregion
-
-        private void dataLayoutControl1_CurrentRecordChanged(object sender, EventArgs e)
-        {
-            _currentDangVien = (tbDangVienBindingSource1.Current as DataRowView).Row as _Project_QLDVDataSet.tbDangVienRow;
-            if (_currentDangVien != null && _currentDangVien.HinhAnh == null)
-            {
-                loadPicture();
-            }
-        }
-        private void dataLayoutControl1_ItemSelectionChanged(object sender, EventArgs e)
-        {
-            // updateDangVien();
-        }
-            #region Cập nhật hình ảnh
-
-        private void loadedPicture(RepositoryItemPictureEdit sender)
-        {
-            var oldvalue = sender.OwnerEdit.OldEditValue as byte[];
-            var newvalue = sender.OwnerEdit.EditValue as byte[];
-            if (oldvalue == null || newvalue == null || oldvalue.Length != newvalue.Length)
-            {
-                var adapterHinhAnh = new _Project_QLDVDataSetTableAdapters.tbHinhAnhTableAdapter();
-                adapterHinhAnh.Update_HinhAnh(newvalue, _currentDangVien.SoTheDangVien);
-            }
-        }
-        private void deletedPicture()
-        {
-            var adapterHinhAnh = new _Project_QLDVDataSetTableAdapters.tbHinhAnhTableAdapter();
-            adapterHinhAnh.Update_HinhAnh(null, _currentDangVien.SoTheDangVien);
-        }
-        private void HinhAnhPictureEdit_Properties_PopupMenuShowing(object sender, DevExpress.XtraEditors.Events.PopupMenuShowingEventArgs e)
-        {
-            var menu = e.PopupMenu;
-            if (_clickEvents.Count == 0)
-            {
-                _clickEvents.Add(new EventHandler(OnPictureEditMenuItemCutClick));
-                _clickEvents.Add(new EventHandler(OnPictureEditMenuItemCopyClick));
-                _clickEvents.Add(new EventHandler(OnPictureEditMenuItemPastClick));
-                _clickEvents.Add(new EventHandler(OnPictureEditMenuItemDeleteClick));
-                _clickEvents.Add(new EventHandler(OnPictureEditMenuItemLoadClick));
-                menu.Items[0].Click += OnPictureEditMenuItemCutClick;
-                menu.Items[1].Click += OnPictureEditMenuItemCopyClick;
-                menu.Items[2].Click += OnPictureEditMenuItemPastClick;
-                menu.Items[3].Click += OnPictureEditMenuItemDeleteClick;
-                menu.Items[4].Click += OnPictureEditMenuItemLoadClick;
-
-            }
-        }
-
-                #region Sự kiện cập nhật hình
-        private void OnPictureEditMenuItemLoadClick(object sender, EventArgs e)
-        {
-            loadedPicture(HinhAnhPictureEdit.Properties);
-        }
-
-        private void OnPictureEditMenuItemPastClick(object sender, EventArgs e)
-        {
-            loadedPicture(HinhAnhPictureEdit.Properties);
-        }
-
-        private void OnPictureEditMenuItemDeleteClick(object sender, EventArgs e)
-        {
-            deletedPicture();
-        }
-
-        private void OnPictureEditMenuItemCopyClick(object sender, EventArgs e)
-        {
-        }
-
-        private void OnPictureEditMenuItemCutClick(object sender, EventArgs e)
-        {
-            deletedPicture();
-        }
-
-
-        #endregion
-
-        #endregion
-
         #endregion
 
         private void layoutView1_DoubleClick(object sender, EventArgs e)
