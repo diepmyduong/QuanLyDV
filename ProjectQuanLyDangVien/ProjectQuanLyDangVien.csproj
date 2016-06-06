@@ -147,6 +147,12 @@
     <Compile Include="Forms\FrmStatistical.Designer.cs">
       <DependentUpon>FrmStatistical.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmStatisticalNation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStatisticalNation.Designer.cs">
+      <DependentUpon>FrmStatisticalNation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Languages\VietNamese.cs" />
     <Compile Include="Libs\CustomFormatProvider.cs" />
     <Compile Include="Libs\Enums.cs" />
@@ -175,7 +181,7 @@
     <Compile Include="_Project_QLDVDataSet.cs">
       <DependentUpon>_Project_QLDVDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_Project_QLDVDataSet.Designer.cs">
+    <Compile Include="_Project_QLDVDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Project_QLDVDataSet.xsd</DependentUpon>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmStatistical.resx">
       <DependentUpon>FrmStatistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStatisticalNation.resx">
+      <DependentUpon>FrmStatisticalNation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -238,8 +247,8 @@
     </None>
     <None Include="_Project_QLDVDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Project_QLDVDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>_Project_QLDVDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="_Project_QLDVDataSet.xss">
       <DependentUpon>_Project_QLDVDataSet.xsd</DependentUpon>

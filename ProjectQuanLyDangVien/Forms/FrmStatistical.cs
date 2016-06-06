@@ -23,6 +23,7 @@ namespace ProjectQuanLyDangVien.Forms
         {
             base.OnFormActive();
             _frmParent.iReLoad.Enabled = true;
+            _frmParent.iDelete.Enabled = true;
         }
 
         protected override void OnReload()
@@ -39,10 +40,16 @@ namespace ProjectQuanLyDangVien.Forms
                 _frmParent.splashScreenManager.CloseWaitForm();
             }
         }
+
+        protected override void OnDelete()
+        {
+            _frmParent.setFormStatus("On Delete....");
+        }
         #endregion
         private void FrmStatistical_Load(object sender, EventArgs e)
         {
             cbGenger.Items.AddEnum(typeof(Libs.Enums.Genger), true);
+            //Đĩnh nghĩa cột giới tính.
             fieldGioiTinh.ValueFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             fieldGioiTinh.ValueFormat.FormatString = "genger";
             fieldGioiTinh.ValueFormat.Format = new Libs.CustomFormatProvider();
