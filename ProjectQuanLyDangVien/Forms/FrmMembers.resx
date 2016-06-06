@@ -860,7 +860,7 @@
     <value>_Project_QLDVDataSet</value>
   </data>
   <data name="&gt;&gt;_Project_QLDVDataSet.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSet, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSet, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbQuaTrinhHoatDongBindingSource.Name" xml:space="preserve">
     <value>tbQuaTrinhHoatDongBindingSource</value>
@@ -1388,103 +1388,103 @@
     <value>tbDangVienTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDangVienTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDangVienTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDangVienTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbQuaTrinhHoatDongTableAdapter.Name" xml:space="preserve">
     <value>tbQuaTrinhHoatDongTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbQuaTrinhHoatDongTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuaTrinhHoatDongTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuaTrinhHoatDongTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbDaoTaoTableAdapter.Name" xml:space="preserve">
     <value>tbDaoTaoTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDaoTaoTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDaoTaoTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDaoTaoTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbKhenThuongTableAdapter.Name" xml:space="preserve">
     <value>tbKhenThuongTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbKhenThuongTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKhenThuongTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKhenThuongTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSoHuyHieuTableAdapter.Name" xml:space="preserve">
     <value>tbSoHuyHieuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSoHuyHieuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSoHuyHieuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSoHuyHieuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbDanhHieuTableAdapter.Name" xml:space="preserve">
     <value>tbDanhHieuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDanhHieuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDanhHieuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDanhHieuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbKyLuatTableAdapter.Name" xml:space="preserve">
     <value>tbKyLuatTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbKyLuatTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKyLuatTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKyLuatTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbBiTuTableAdapter.Name" xml:space="preserve">
     <value>tbBiTuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbBiTuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbBiTuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbBiTuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbCongViecCheDoCuTableAdapter.Name" xml:space="preserve">
     <value>tbCongViecCheDoCuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbCongViecCheDoCuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbCongViecCheDoCuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbCongViecCheDoCuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbDiNuocNgoaiTableAdapter.Name" xml:space="preserve">
     <value>tbDiNuocNgoaiTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDiNuocNgoaiTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDiNuocNgoaiTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDiNuocNgoaiTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbQuanHeNuocNgoaiTableAdapter.Name" xml:space="preserve">
     <value>tbQuanHeNuocNgoaiTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbQuanHeNuocNgoaiTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuanHeNuocNgoaiTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuanHeNuocNgoaiTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbThanNhanNuocNgoaiTableAdapter.Name" xml:space="preserve">
     <value>tbThanNhanNuocNgoaiTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbThanNhanNuocNgoaiTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanNuocNgoaiTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanNuocNgoaiTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbThanNhanTableAdapter.Name" xml:space="preserve">
     <value>tbThanNhanTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbThanNhanTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbTaiSanTableAdapter.Name" xml:space="preserve">
     <value>tbTaiSanTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbTaiSanTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbTaiSanTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbTaiSanTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSysDanTocTableAdapter.Name" xml:space="preserve">
     <value>tbSysDanTocTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSysDanTocTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysDanTocTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysDanTocTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSysTonGiaoTableAdapter.Name" xml:space="preserve">
     <value>tbSysTonGiaoTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSysTonGiaoTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTonGiaoTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTonGiaoTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSysTinhThanhTableAdapter.Name" xml:space="preserve">
     <value>tbSysTinhThanhTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSysTinhThanhTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTinhThanhTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTinhThanhTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMembers</value>
