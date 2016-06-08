@@ -167,10 +167,6 @@ namespace ProjectQuanLyDangVien.Forms
         }
         protected override void OnReload()
         {
-            if (!_frmParent.splashScreenManager.IsSplashFormVisible)
-            {
-                _frmParent.splashScreenManager.ShowWaitForm();
-            }
             //Bỏ focus để update dữ liệu
             var tempFocus = gridView1.FocusedRowHandle;
             gridView1.FocusedRowHandle = -1;
@@ -184,6 +180,10 @@ namespace ProjectQuanLyDangVien.Forms
                 {
                     OnSave();
                 }
+            }
+            if (!_frmParent.splashScreenManager.IsSplashFormVisible)
+            {
+                _frmParent.splashScreenManager.ShowWaitForm();
             }
             //Gọi bộ đếm thời gian thực hiện load
             Stopwatch sw = Stopwatch.StartNew();
@@ -293,8 +293,8 @@ namespace ProjectQuanLyDangVien.Forms
         #region Sự kiện chính
         private void FrmMembers_Load_1(object sender, EventArgs e)
         {
-            cbGenger.Items.AddEnum(typeof(Libs.Enums.Genger), true); // Giới tính
-            cbGenger2.Items.AddEnum(typeof(Libs.Enums.Genger), true); // Giới tính
+            cbGenger.Items.AddEnum(typeof(Libs.Enums.Gender), true); // Giới tính
+            cbGenger2.Items.AddEnum(typeof(Libs.Enums.Gender), true); // Giới tính
             OnReload();
         }
             #region Quản lý Tabs
@@ -337,7 +337,7 @@ namespace ProjectQuanLyDangVien.Forms
         private void layoutView1_VisibleRecordIndexChanged(object sender, DevExpress.XtraGrid.Views.Layout.Events.LayoutViewVisibleRecordIndexChangedEventArgs e)
         {
             _currentDangVien = layoutView1.GetDataRow(layoutView1.VisibleRecordIndex) as _Project_QLDVDataSet.tbDangVienRow;
-            if (_currentDangVien != null && _currentDangVien.HinhAnh == null)
+            if (_currentDangVien != null && _currentDangVien.HinhAnh == null && xtraTabControl1.SelectedTabPage.Name != "pageTable")
             {
                 loadPicture();
             }
@@ -441,7 +441,20 @@ namespace ProjectQuanLyDangVien.Forms
 
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
-            OnSave();
+            //OnSave();
+        }
+
+        private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            GridView currentView = sender as GridView;
+            if (e.Column.FieldName == "HoTenKhaiSinh")
+            {
+                var isdead = currentView.GetRowCellValue(e.RowHandle, currentView.Columns.ColumnByFieldName("DaChet"));
+                if(isdead != null && (bool)isdead)
+                { 
+                    e.Appearance.BackColor = Color.Red;
+                }
+            }
         }
     }
 }

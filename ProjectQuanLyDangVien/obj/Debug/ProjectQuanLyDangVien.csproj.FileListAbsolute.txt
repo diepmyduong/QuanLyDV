@@ -194,7 +194,6 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\Proje
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\bin\Debug\RestSharp.xml
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\bin\Debug\Yandex.Translator.pdb
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\bin\Debug\Yandex.Translator.xml
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmStatistical.resources
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmMemberActivities.resources
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\bin\Debug\ProjectQuanLyDangVien.exe.config
@@ -398,3 +397,5 @@ E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyD
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\vi-VN\ProjectQuanLyDangVien.resources.dll
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.exe
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmStatisticalNation.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.csprojResolveAssemblyReference.cache

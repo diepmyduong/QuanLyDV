@@ -71,6 +71,12 @@ namespace ProjectQuanLyDangVien
             this.iReLoad.Enabled = false;
             this.iPrint.Enabled = false;
             this.iDetail.Enabled = false;
+            //Làm mới các menu
+            this.iExport.ButtonStyle = BarButtonStyle.Default;
+            this.pExportMenu.ItemLinks.Clear();
+            this.iNew.ButtonStyle = BarButtonStyle.Default;
+            this.pNewMenu.ItemLinks.Clear();
+
         }
 
         public void RemoveAllBarButtonEvent()

@@ -29,7 +29,7 @@ namespace ProjectQuanLyDangVien.Libs
     }
     public class Enums
     {
-        public enum Genger // GIới tính
+        public enum Gender // GIới tính
         {
             [System.ComponentModel.Description("Nữ")]
             Female = 0,
@@ -63,12 +63,14 @@ namespace ProjectQuanLyDangVien.Libs
 
         public enum Activities // Sinh hoạt
         {
+            [System.ComponentModel.Description("")]
+            Null = 0,
             [System.ComponentModel.Description("+")]
-            In = 0,
+            In = 1,
             [System.ComponentModel.Description("-")]
-            Out = 1,
+            Out = 2,
             [System.ComponentModel.Description("x")]
-            OutForeign = 2
+            OutForeign = 3
         }
     }
     

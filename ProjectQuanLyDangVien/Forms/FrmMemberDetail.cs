@@ -139,7 +139,7 @@ namespace ProjectQuanLyDangVien.Forms
            
             cbBonus.Items.AddEnum(typeof(Libs.Enums.Bonus), true); // Loại khen thưởng
             cbArmorial.Items.AddEnum(typeof(Libs.Enums.ArmorialYear), true); // Số huy hiệu
-            GioiTinhTextEdit.Properties.Items.AddEnum(typeof(Libs.Enums.Genger), true); // Giới tính
+            GioiTinhTextEdit.Properties.Items.AddEnum(typeof(Libs.Enums.Gender), true); // Giới tính
             GioiTinhTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             if(CurrentMember == null)
             {

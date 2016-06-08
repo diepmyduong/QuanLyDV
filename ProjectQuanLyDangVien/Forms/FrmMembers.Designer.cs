@@ -92,6 +92,9 @@
             this.layoutViewField_colHocVi1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.colHocHam1 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colHocHam1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colDaChet = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.checkBoxIsDead = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.layoutViewField_colDaChet = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             this.Group1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -125,6 +128,10 @@
             this.colNgoaiNgu1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
+            this.colDaChet1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLyDoChet = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgayRaKhoiDang = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHinhThucRaDang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tbDangVienTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDangVienTableAdapter();
             this.tbQuaTrinhHoatDongTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuaTrinhHoatDongTableAdapter();
             this.tbDaoTaoTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDaoTaoTableAdapter();
@@ -142,6 +149,7 @@
             this.tbSysDanTocTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysDanTocTableAdapter();
             this.tbSysTonGiaoTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTonGiaoTableAdapter();
             this.tbSysTinhThanhTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTinhThanhTableAdapter();
+            this.colNgayChet = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbDangVienBindingSource1)).BeginInit();
@@ -190,6 +198,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgoaiNgu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHocVi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHocHam1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkBoxIsDead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colDaChet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Group1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -327,7 +337,8 @@
             this.cbGenger,
             this.lkNation,
             this.lkReligion,
-            this.lkNativeLand});
+            this.lkNativeLand,
+            this.checkBoxIsDead});
             this.grLayout.UseEmbeddedNavigator = true;
             this.grLayout.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.layoutView1,
@@ -355,7 +366,8 @@
             this.colLyLuanChinhTri1,
             this.colNgoaiNgu,
             this.colHocVi1,
-            this.colHocHam1});
+            this.colHocHam1,
+            this.colDaChet});
             this.layoutView1.GridControl = this.grLayout;
             this.layoutView1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutViewField_colTrinhDo1,
@@ -395,11 +407,11 @@
             // 
             // layoutViewField_colHinhAnh
             // 
-            this.layoutViewField_colHinhAnh.EditorPreferredWidth = 92;
+            this.layoutViewField_colHinhAnh.EditorPreferredWidth = 93;
             this.layoutViewField_colHinhAnh.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colHinhAnh.Name = "layoutViewField_colHinhAnh";
             this.layoutViewField_colHinhAnh.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colHinhAnh.Size = new System.Drawing.Size(106, 136);
+            this.layoutViewField_colHinhAnh.Size = new System.Drawing.Size(107, 136);
             this.layoutViewField_colHinhAnh.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.layoutViewField_colHinhAnh.StartNewLine = true;
             this.layoutViewField_colHinhAnh.TextSize = new System.Drawing.Size(0, 0);
@@ -413,11 +425,11 @@
             // 
             // layoutViewField_colSoTheDangVien1
             // 
-            this.layoutViewField_colSoTheDangVien1.EditorPreferredWidth = 82;
-            this.layoutViewField_colSoTheDangVien1.Location = new System.Drawing.Point(106, 0);
+            this.layoutViewField_colSoTheDangVien1.EditorPreferredWidth = 84;
+            this.layoutViewField_colSoTheDangVien1.Location = new System.Drawing.Point(107, 0);
             this.layoutViewField_colSoTheDangVien1.Name = "layoutViewField_colSoTheDangVien1";
             this.layoutViewField_colSoTheDangVien1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colSoTheDangVien1.Size = new System.Drawing.Size(201, 34);
+            this.layoutViewField_colSoTheDangVien1.Size = new System.Drawing.Size(203, 34);
             this.layoutViewField_colSoTheDangVien1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colSoTheDangVien1.TextSize = new System.Drawing.Size(100, 13);
             this.layoutViewField_colSoTheDangVien1.TextToControlDistance = 5;
@@ -430,11 +442,11 @@
             // 
             // layoutViewField_colSoLyLich1
             // 
-            this.layoutViewField_colSoLyLich1.EditorPreferredWidth = 129;
-            this.layoutViewField_colSoLyLich1.Location = new System.Drawing.Point(106, 34);
+            this.layoutViewField_colSoLyLich1.EditorPreferredWidth = 131;
+            this.layoutViewField_colSoLyLich1.Location = new System.Drawing.Point(107, 34);
             this.layoutViewField_colSoLyLich1.Name = "layoutViewField_colSoLyLich1";
             this.layoutViewField_colSoLyLich1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colSoLyLich1.Size = new System.Drawing.Size(201, 34);
+            this.layoutViewField_colSoLyLich1.Size = new System.Drawing.Size(203, 34);
             this.layoutViewField_colSoLyLich1.TextSize = new System.Drawing.Size(55, 13);
             // 
             // colChiBo1
@@ -445,11 +457,11 @@
             // 
             // layoutViewField_colChiBo1
             // 
-            this.layoutViewField_colChiBo1.EditorPreferredWidth = 129;
-            this.layoutViewField_colChiBo1.Location = new System.Drawing.Point(106, 68);
+            this.layoutViewField_colChiBo1.EditorPreferredWidth = 131;
+            this.layoutViewField_colChiBo1.Location = new System.Drawing.Point(107, 68);
             this.layoutViewField_colChiBo1.Name = "layoutViewField_colChiBo1";
             this.layoutViewField_colChiBo1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colChiBo1.Size = new System.Drawing.Size(201, 34);
+            this.layoutViewField_colChiBo1.Size = new System.Drawing.Size(203, 34);
             this.layoutViewField_colChiBo1.TextSize = new System.Drawing.Size(55, 13);
             // 
             // colHoTenDangDung1
@@ -461,11 +473,11 @@
             // 
             // layoutViewField_colHoTenDangDung1
             // 
-            this.layoutViewField_colHoTenDangDung1.EditorPreferredWidth = 217;
+            this.layoutViewField_colHoTenDangDung1.EditorPreferredWidth = 220;
             this.layoutViewField_colHoTenDangDung1.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colHoTenDangDung1.Name = "layoutViewField_colHoTenDangDung1";
             this.layoutViewField_colHoTenDangDung1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colHoTenDangDung1.Size = new System.Drawing.Size(291, 34);
+            this.layoutViewField_colHoTenDangDung1.Size = new System.Drawing.Size(294, 34);
             this.layoutViewField_colHoTenDangDung1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colHoTenDangDung1.TextSize = new System.Drawing.Size(55, 13);
             this.layoutViewField_colHoTenDangDung1.TextToControlDistance = 5;
@@ -486,11 +498,11 @@
             // 
             // layoutViewField_colGioiTinh1
             // 
-            this.layoutViewField_colGioiTinh1.EditorPreferredWidth = 76;
-            this.layoutViewField_colGioiTinh1.Location = new System.Drawing.Point(146, 34);
+            this.layoutViewField_colGioiTinh1.EditorPreferredWidth = 74;
+            this.layoutViewField_colGioiTinh1.Location = new System.Drawing.Point(151, 34);
             this.layoutViewField_colGioiTinh1.Name = "layoutViewField_colGioiTinh1";
             this.layoutViewField_colGioiTinh1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colGioiTinh1.Size = new System.Drawing.Size(145, 34);
+            this.layoutViewField_colGioiTinh1.Size = new System.Drawing.Size(143, 34);
             this.layoutViewField_colGioiTinh1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colGioiTinh1.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutViewField_colGioiTinh1.TextSize = new System.Drawing.Size(50, 13);
@@ -506,11 +518,11 @@
             // 
             // layoutViewField_colNgaySinh1
             // 
-            this.layoutViewField_colNgaySinh1.EditorPreferredWidth = 72;
+            this.layoutViewField_colNgaySinh1.EditorPreferredWidth = 77;
             this.layoutViewField_colNgaySinh1.Location = new System.Drawing.Point(0, 34);
             this.layoutViewField_colNgaySinh1.Name = "layoutViewField_colNgaySinh1";
             this.layoutViewField_colNgaySinh1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colNgaySinh1.Size = new System.Drawing.Size(146, 34);
+            this.layoutViewField_colNgaySinh1.Size = new System.Drawing.Size(151, 34);
             this.layoutViewField_colNgaySinh1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colNgaySinh1.TextSize = new System.Drawing.Size(55, 13);
             this.layoutViewField_colNgaySinh1.TextToControlDistance = 5;
@@ -542,11 +554,11 @@
             // 
             // layoutViewField_colQueQuan
             // 
-            this.layoutViewField_colQueQuan.EditorPreferredWidth = 217;
+            this.layoutViewField_colQueQuan.EditorPreferredWidth = 220;
             this.layoutViewField_colQueQuan.Location = new System.Drawing.Point(0, 102);
             this.layoutViewField_colQueQuan.Name = "layoutViewField_colQueQuan";
             this.layoutViewField_colQueQuan.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colQueQuan.Size = new System.Drawing.Size(291, 30);
+            this.layoutViewField_colQueQuan.Size = new System.Drawing.Size(294, 34);
             this.layoutViewField_colQueQuan.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colQueQuan.TextSize = new System.Drawing.Size(55, 13);
             this.layoutViewField_colQueQuan.TextToControlDistance = 5;
@@ -580,11 +592,11 @@
             // 
             // layoutViewField_colDanToc
             // 
-            this.layoutViewField_colDanToc.EditorPreferredWidth = 72;
+            this.layoutViewField_colDanToc.EditorPreferredWidth = 77;
             this.layoutViewField_colDanToc.Location = new System.Drawing.Point(0, 68);
             this.layoutViewField_colDanToc.Name = "layoutViewField_colDanToc";
             this.layoutViewField_colDanToc.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colDanToc.Size = new System.Drawing.Size(146, 34);
+            this.layoutViewField_colDanToc.Size = new System.Drawing.Size(151, 34);
             this.layoutViewField_colDanToc.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colDanToc.TextSize = new System.Drawing.Size(55, 13);
             this.layoutViewField_colDanToc.TextToControlDistance = 5;
@@ -619,11 +631,11 @@
             // 
             // layoutViewField_colTonGiao
             // 
-            this.layoutViewField_colTonGiao.EditorPreferredWidth = 76;
-            this.layoutViewField_colTonGiao.Location = new System.Drawing.Point(146, 68);
+            this.layoutViewField_colTonGiao.EditorPreferredWidth = 74;
+            this.layoutViewField_colTonGiao.Location = new System.Drawing.Point(151, 68);
             this.layoutViewField_colTonGiao.Name = "layoutViewField_colTonGiao";
             this.layoutViewField_colTonGiao.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colTonGiao.Size = new System.Drawing.Size(145, 34);
+            this.layoutViewField_colTonGiao.Size = new System.Drawing.Size(143, 34);
             this.layoutViewField_colTonGiao.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colTonGiao.TextSize = new System.Drawing.Size(50, 13);
             this.layoutViewField_colTonGiao.TextToControlDistance = 5;
@@ -640,7 +652,7 @@
             this.layoutViewField_colCongViecChinh1.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colCongViecChinh1.Name = "layoutViewField_colCongViecChinh1";
             this.layoutViewField_colCongViecChinh1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colCongViecChinh1.Size = new System.Drawing.Size(307, 325);
+            this.layoutViewField_colCongViecChinh1.Size = new System.Drawing.Size(310, 349);
             this.layoutViewField_colCongViecChinh1.TextSize = new System.Drawing.Size(125, 13);
             // 
             // colNgayVaoDang1
@@ -651,11 +663,11 @@
             // 
             // layoutViewField_colNgayVaoDang1
             // 
-            this.layoutViewField_colNgayVaoDang1.EditorPreferredWidth = 92;
-            this.layoutViewField_colNgayVaoDang1.Location = new System.Drawing.Point(106, 102);
+            this.layoutViewField_colNgayVaoDang1.EditorPreferredWidth = 94;
+            this.layoutViewField_colNgayVaoDang1.Location = new System.Drawing.Point(107, 102);
             this.layoutViewField_colNgayVaoDang1.Name = "layoutViewField_colNgayVaoDang1";
             this.layoutViewField_colNgayVaoDang1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colNgayVaoDang1.Size = new System.Drawing.Size(201, 34);
+            this.layoutViewField_colNgayVaoDang1.Size = new System.Drawing.Size(203, 34);
             this.layoutViewField_colNgayVaoDang1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutViewField_colNgayVaoDang1.TextSize = new System.Drawing.Size(90, 13);
             this.layoutViewField_colNgayVaoDang1.TextToControlDistance = 5;
@@ -672,7 +684,7 @@
             this.layoutViewField_colTrinhDo1.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colTrinhDo1.Name = "layoutViewField_colTrinhDo1";
             this.layoutViewField_colTrinhDo1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colTrinhDo1.Size = new System.Drawing.Size(307, 325);
+            this.layoutViewField_colTrinhDo1.Size = new System.Drawing.Size(310, 349);
             this.layoutViewField_colTrinhDo1.TextSize = new System.Drawing.Size(87, 13);
             // 
             // colLyLuanChinhTri1
@@ -687,7 +699,7 @@
             this.layoutViewField_colLyLuanChinhTri1.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colLyLuanChinhTri1.Name = "layoutViewField_colLyLuanChinhTri1";
             this.layoutViewField_colLyLuanChinhTri1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colLyLuanChinhTri1.Size = new System.Drawing.Size(307, 325);
+            this.layoutViewField_colLyLuanChinhTri1.Size = new System.Drawing.Size(310, 349);
             this.layoutViewField_colLyLuanChinhTri1.TextSize = new System.Drawing.Size(79, 13);
             // 
             // colNgoaiNgu
@@ -702,7 +714,7 @@
             this.layoutViewField_colNgoaiNgu.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colNgoaiNgu.Name = "layoutViewField_colNgoaiNgu";
             this.layoutViewField_colNgoaiNgu.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colNgoaiNgu.Size = new System.Drawing.Size(307, 325);
+            this.layoutViewField_colNgoaiNgu.Size = new System.Drawing.Size(310, 349);
             this.layoutViewField_colNgoaiNgu.TextSize = new System.Drawing.Size(53, 13);
             // 
             // colHocVi1
@@ -717,7 +729,7 @@
             this.layoutViewField_colHocVi1.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colHocVi1.Name = "layoutViewField_colHocVi1";
             this.layoutViewField_colHocVi1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colHocVi1.Size = new System.Drawing.Size(307, 325);
+            this.layoutViewField_colHocVi1.Size = new System.Drawing.Size(310, 349);
             this.layoutViewField_colHocVi1.TextSize = new System.Drawing.Size(33, 13);
             // 
             // colHocHam1
@@ -732,8 +744,30 @@
             this.layoutViewField_colHocHam1.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colHocHam1.Name = "layoutViewField_colHocHam1";
             this.layoutViewField_colHocHam1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.layoutViewField_colHocHam1.Size = new System.Drawing.Size(307, 325);
+            this.layoutViewField_colHocHam1.Size = new System.Drawing.Size(310, 349);
             this.layoutViewField_colHocHam1.TextSize = new System.Drawing.Size(45, 13);
+            // 
+            // colDaChet
+            // 
+            this.colDaChet.ColumnEdit = this.checkBoxIsDead;
+            this.colDaChet.FieldName = "DaChet";
+            this.colDaChet.LayoutViewField = this.layoutViewField_colDaChet;
+            this.colDaChet.Name = "colDaChet";
+            // 
+            // checkBoxIsDead
+            // 
+            resources.ApplyResources(this.checkBoxIsDead, "checkBoxIsDead");
+            this.checkBoxIsDead.Name = "checkBoxIsDead";
+            // 
+            // layoutViewField_colDaChet
+            // 
+            this.layoutViewField_colDaChet.EditorPreferredWidth = 243;
+            this.layoutViewField_colDaChet.Location = new System.Drawing.Point(0, 136);
+            this.layoutViewField_colDaChet.Name = "layoutViewField_colDaChet";
+            this.layoutViewField_colDaChet.Size = new System.Drawing.Size(294, 42);
+            this.layoutViewField_colDaChet.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutViewField_colDaChet.TextSize = new System.Drawing.Size(42, 13);
+            this.layoutViewField_colDaChet.TextToControlDistance = 5;
             // 
             // layoutViewCard1
             // 
@@ -746,7 +780,7 @@
             this.layoutViewField_colChiBo1,
             this.layoutViewField_colNgayVaoDang1,
             this.Group1});
-            this.layoutViewCard1.Name = "layoutViewTemplateCard";
+            this.layoutViewCard1.Name = "layoutViewCard1";
             this.layoutViewCard1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
             // 
             // Group1
@@ -758,11 +792,12 @@
             this.layoutViewField_colGioiTinh1,
             this.layoutViewField_colTonGiao,
             this.layoutViewField_colDanToc,
-            this.layoutViewField_colQueQuan});
+            this.layoutViewField_colQueQuan,
+            this.layoutViewField_colDaChet});
             this.Group1.Location = new System.Drawing.Point(0, 136);
             this.Group1.Name = "Group1";
             this.Group1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
-            this.Group1.Size = new System.Drawing.Size(307, 167);
+            this.Group1.Size = new System.Drawing.Size(310, 213);
             this.Group1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             // 
             // gridView2
@@ -815,15 +850,22 @@
             this.colCMND,
             this.colNgheNghiepKhiVao,
             this.colNgoaiNgu1,
-            this.colGhiChu3});
+            this.colGhiChu3,
+            this.colDaChet1,
+            this.colLyDoChet,
+            this.colNgayRaKhoiDang,
+            this.colHinhThucRaDang,
+            this.colNgayChet});
             this.gridView1.GridControl = this.grTable;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colGhiChu3, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView1.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridView1_CustomDrawCell);
             this.gridView1.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridView1_ValidateRow);
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
@@ -1020,6 +1062,30 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemMemoExEdit1.Buttons"))))});
             this.repositoryItemMemoExEdit1.Name = "repositoryItemMemoExEdit1";
             // 
+            // colDaChet1
+            // 
+            this.colDaChet1.FieldName = "DaChet";
+            this.colDaChet1.Name = "colDaChet1";
+            resources.ApplyResources(this.colDaChet1, "colDaChet1");
+            // 
+            // colLyDoChet
+            // 
+            this.colLyDoChet.FieldName = "LyDoChet";
+            this.colLyDoChet.Name = "colLyDoChet";
+            resources.ApplyResources(this.colLyDoChet, "colLyDoChet");
+            // 
+            // colNgayRaKhoiDang
+            // 
+            this.colNgayRaKhoiDang.FieldName = "NgayRaKhoiDang";
+            this.colNgayRaKhoiDang.Name = "colNgayRaKhoiDang";
+            resources.ApplyResources(this.colNgayRaKhoiDang, "colNgayRaKhoiDang");
+            // 
+            // colHinhThucRaDang
+            // 
+            this.colHinhThucRaDang.FieldName = "HinhThucRaDang";
+            this.colHinhThucRaDang.Name = "colHinhThucRaDang";
+            resources.ApplyResources(this.colHinhThucRaDang, "colHinhThucRaDang");
+            // 
             // tbDangVienTableAdapter
             // 
             this.tbDangVienTableAdapter.ClearBeforeFill = true;
@@ -1088,6 +1154,12 @@
             // 
             this.tbSysTinhThanhTableAdapter.ClearBeforeFill = true;
             // 
+            // colNgayChet
+            // 
+            this.colNgayChet.FieldName = "NgayChet";
+            this.colNgayChet.Name = "colNgayChet";
+            resources.ApplyResources(this.colNgayChet, "colNgayChet");
+            // 
             // FrmMembers
             // 
             resources.ApplyResources(this, "$this");
@@ -1148,6 +1220,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgoaiNgu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHocVi1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHocHam1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkBoxIsDead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colDaChet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Group1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -1222,25 +1296,6 @@
         private System.Windows.Forms.BindingSource tbTaiSanBindingSource;
         private _Project_QLDVDataSetTableAdapters.tbTaiSanTableAdapter tbTaiSanTableAdapter;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox cbGenger;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHinhAnh;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSoTheDangVien1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSoLyLich1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colChiBo1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHoTenDangDung1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGioiTinh1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colNgaySinh1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colQueQuan;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colDanToc;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTonGiao;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colCongViecChinh1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colNgayVaoDang1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTrinhDo1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colLyLuanChinhTri1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colNgoaiNgu;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHocVi1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHocHam1;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
-        private DevExpress.XtraLayout.LayoutControlGroup Group1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lkNation;
         private System.Windows.Forms.BindingSource tbSysDanTocBindingSource;
@@ -1278,5 +1333,32 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit3;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHinhAnh;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSoTheDangVien1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSoLyLich1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colChiBo1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHoTenDangDung1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGioiTinh1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colNgaySinh1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colQueQuan;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colDanToc;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTonGiao;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colCongViecChinh1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colNgayVaoDang1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTrinhDo1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colLyLuanChinhTri1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colNgoaiNgu;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHocVi1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHocHam1;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colDaChet;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit checkBoxIsDead;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colDaChet;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
+        private DevExpress.XtraLayout.LayoutControlGroup Group1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDaChet1;
+        private DevExpress.XtraGrid.Columns.GridColumn colLyDoChet;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgayRaKhoiDang;
+        private DevExpress.XtraGrid.Columns.GridColumn colHinhThucRaDang;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgayChet;
     }
 }
