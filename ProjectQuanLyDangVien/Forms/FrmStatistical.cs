@@ -48,10 +48,10 @@ namespace ProjectQuanLyDangVien.Forms
         #endregion
         private void FrmStatistical_Load(object sender, EventArgs e)
         {
-            cbGenger.Items.AddEnum(typeof(Libs.Enums.Genger), true);
+            cbGenger.Items.AddEnum(typeof(Libs.Enums.Gender), true);
             //Đĩnh nghĩa cột giới tính.
             fieldGioiTinh.ValueFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            fieldGioiTinh.ValueFormat.FormatString = "genger";
+            fieldGioiTinh.ValueFormat.FormatString = "gender";
             fieldGioiTinh.ValueFormat.Format = new Libs.CustomFormatProvider();
             OnReload();
         }

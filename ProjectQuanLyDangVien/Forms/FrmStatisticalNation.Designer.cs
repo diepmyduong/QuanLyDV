@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraPivotGrid.PivotGridGroup pivotGridGroup1 = new DevExpress.XtraPivotGrid.PivotGridGroup();
             DevExpress.XtraPivotGrid.PivotGridGroup pivotGridGroup2 = new DevExpress.XtraPivotGrid.PivotGridGroup();
+            DevExpress.XtraPivotGrid.PivotGridGroup pivotGridGroup3 = new DevExpress.XtraPivotGrid.PivotGridGroup();
+            DevExpress.XtraPivotGrid.PivotGridGroup pivotGridGroup4 = new DevExpress.XtraPivotGrid.PivotGridGroup();
             this.fieldNgayVaoDang = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldNgayVaoDang1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldNgayVaoDang2 = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -38,6 +40,13 @@
             this.fieldSoTheDangVien2 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldHoTen = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldNgayVaoDang3 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldTonGiao = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldSoTheDangVien5 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldHoTen1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldNgayVaoDang4 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldNgayVaoDang5 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldNgayVaoDang6 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldNgayVaoDang7 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.dateTo = new DevExpress.XtraEditors.DateEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -51,14 +60,12 @@
             this.fieldSoTheDangVien = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldSoTheDangVien1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pageReligion = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colSoTheDangVien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHoTen = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDanToc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUuTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNgayVaoDang = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pivotGridControl2 = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.fBCtongiaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fieldSoTheDangVien3 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldSoTheDangVien4 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.f_BC_dantocTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.f_BC_dantocTableAdapter();
+            this.f_BC_tongiaoTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.f_BC_tongiaoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -74,8 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fBCdantocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Project_QLDVDataSet)).BeginInit();
             this.pageReligion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fBCtongiaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -158,6 +165,75 @@
             this.fieldNgayVaoDang3.FieldName = "NgayVaoDang";
             this.fieldNgayVaoDang3.Name = "fieldNgayVaoDang3";
             this.fieldNgayVaoDang3.Visible = false;
+            // 
+            // fieldTonGiao
+            // 
+            this.fieldTonGiao.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldTonGiao.AreaIndex = 0;
+            this.fieldTonGiao.Caption = "Tôn giáo";
+            this.fieldTonGiao.ExpandedInFieldsGroup = false;
+            this.fieldTonGiao.FieldName = "TonGiao";
+            this.fieldTonGiao.Name = "fieldTonGiao";
+            // 
+            // fieldSoTheDangVien5
+            // 
+            this.fieldSoTheDangVien5.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldSoTheDangVien5.AreaIndex = 1;
+            this.fieldSoTheDangVien5.Caption = "Số thẻ Đảng Viên";
+            this.fieldSoTheDangVien5.FieldName = "SoTheDangVien";
+            this.fieldSoTheDangVien5.Name = "fieldSoTheDangVien5";
+            this.fieldSoTheDangVien5.Visible = false;
+            // 
+            // fieldHoTen1
+            // 
+            this.fieldHoTen1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldHoTen1.AreaIndex = 2;
+            this.fieldHoTen1.Caption = "Họ và tên";
+            this.fieldHoTen1.FieldName = "HoTen";
+            this.fieldHoTen1.Name = "fieldHoTen1";
+            this.fieldHoTen1.Visible = false;
+            // 
+            // fieldNgayVaoDang4
+            // 
+            this.fieldNgayVaoDang4.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldNgayVaoDang4.AreaIndex = 3;
+            this.fieldNgayVaoDang4.Caption = "Ngày vào Đảng";
+            this.fieldNgayVaoDang4.FieldName = "NgayVaoDang";
+            this.fieldNgayVaoDang4.Name = "fieldNgayVaoDang4";
+            this.fieldNgayVaoDang4.Visible = false;
+            // 
+            // fieldNgayVaoDang5
+            // 
+            this.fieldNgayVaoDang5.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldNgayVaoDang5.AreaIndex = 0;
+            this.fieldNgayVaoDang5.Caption = "Năm";
+            this.fieldNgayVaoDang5.ExpandedInFieldsGroup = false;
+            this.fieldNgayVaoDang5.FieldName = "NgayVaoDang";
+            this.fieldNgayVaoDang5.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            this.fieldNgayVaoDang5.Name = "fieldNgayVaoDang5";
+            this.fieldNgayVaoDang5.UnboundFieldName = "fieldNgayVaoDang5";
+            // 
+            // fieldNgayVaoDang6
+            // 
+            this.fieldNgayVaoDang6.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldNgayVaoDang6.AreaIndex = 1;
+            this.fieldNgayVaoDang6.Caption = "Quý";
+            this.fieldNgayVaoDang6.FieldName = "NgayVaoDang";
+            this.fieldNgayVaoDang6.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateQuarter;
+            this.fieldNgayVaoDang6.Name = "fieldNgayVaoDang6";
+            this.fieldNgayVaoDang6.UnboundFieldName = "fieldNgayVaoDang6";
+            this.fieldNgayVaoDang6.Visible = false;
+            // 
+            // fieldNgayVaoDang7
+            // 
+            this.fieldNgayVaoDang7.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldNgayVaoDang7.AreaIndex = 2;
+            this.fieldNgayVaoDang7.Caption = "Tháng";
+            this.fieldNgayVaoDang7.FieldName = "NgayVaoDang";
+            this.fieldNgayVaoDang7.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth;
+            this.fieldNgayVaoDang7.Name = "fieldNgayVaoDang7";
+            this.fieldNgayVaoDang7.UnboundFieldName = "fieldNgayVaoDang7";
+            this.fieldNgayVaoDang7.Visible = false;
             // 
             // panelControl2
             // 
@@ -264,6 +340,7 @@
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.Size = new System.Drawing.Size(678, 298);
             this.pivotGridControl1.TabIndex = 0;
+            this.pivotGridControl1.CustomDrawCell += new DevExpress.XtraPivotGrid.PivotCustomDrawCellEventHandler(this.pivotGridControl1_CustomDrawCell);
             // 
             // fBCdantocBindingSource
             // 
@@ -291,77 +368,81 @@
             this.fieldSoTheDangVien1.Caption = "Tỷ lệ";
             this.fieldSoTheDangVien1.FieldName = "SoTheDangVien";
             this.fieldSoTheDangVien1.Name = "fieldSoTheDangVien1";
-            this.fieldSoTheDangVien1.SummaryDisplayType = DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentVariation;
+            this.fieldSoTheDangVien1.SummaryDisplayType = DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfColumnGrandTotal;
             this.fieldSoTheDangVien1.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
             // 
             // pageReligion
             // 
-            this.pageReligion.Controls.Add(this.gridControl1);
+            this.pageReligion.Controls.Add(this.pivotGridControl2);
             this.pageReligion.Name = "pageReligion";
             this.pageReligion.Size = new System.Drawing.Size(678, 298);
             this.pageReligion.Text = "Tôn giáo";
             // 
-            // gridControl1
+            // pivotGridControl2
             // 
-            this.gridControl1.DataSource = this.fBCdantocBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(678, 298);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.pivotGridControl2.DataSource = this.fBCtongiaoBindingSource;
+            this.pivotGridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pivotGridControl2.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
+            this.fieldHoTen1,
+            this.fieldNgayVaoDang4,
+            this.fieldSoTheDangVien3,
+            this.fieldSoTheDangVien4,
+            this.fieldTonGiao,
+            this.fieldNgayVaoDang5,
+            this.fieldNgayVaoDang6,
+            this.fieldNgayVaoDang7,
+            this.fieldSoTheDangVien5});
+            pivotGridGroup3.Fields.Add(this.fieldTonGiao);
+            pivotGridGroup3.Fields.Add(this.fieldSoTheDangVien5);
+            pivotGridGroup3.Fields.Add(this.fieldHoTen1);
+            pivotGridGroup3.Fields.Add(this.fieldNgayVaoDang4);
+            pivotGridGroup3.Hierarchy = null;
+            pivotGridGroup3.ShowNewValues = true;
+            pivotGridGroup4.Fields.Add(this.fieldNgayVaoDang5);
+            pivotGridGroup4.Fields.Add(this.fieldNgayVaoDang6);
+            pivotGridGroup4.Fields.Add(this.fieldNgayVaoDang7);
+            pivotGridGroup4.Hierarchy = null;
+            pivotGridGroup4.ShowNewValues = true;
+            this.pivotGridControl2.Groups.AddRange(new DevExpress.XtraPivotGrid.PivotGridGroup[] {
+            pivotGridGroup3,
+            pivotGridGroup4});
+            this.pivotGridControl2.Location = new System.Drawing.Point(0, 0);
+            this.pivotGridControl2.Name = "pivotGridControl2";
+            this.pivotGridControl2.Size = new System.Drawing.Size(678, 298);
+            this.pivotGridControl2.TabIndex = 0;
+            this.pivotGridControl2.CustomDrawCell += new DevExpress.XtraPivotGrid.PivotCustomDrawCellEventHandler(this.pivotGridControl1_CustomDrawCell);
             // 
-            // gridView1
+            // fBCtongiaoBindingSource
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSoTheDangVien,
-            this.colHoTen,
-            this.colDanToc,
-            this.colUuTien,
-            this.colNgayVaoDang});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.fBCtongiaoBindingSource.DataMember = "f_BC_tongiao";
+            this.fBCtongiaoBindingSource.DataSource = this._Project_QLDVDataSet;
             // 
-            // colSoTheDangVien
+            // fieldSoTheDangVien3
             // 
-            this.colSoTheDangVien.FieldName = "SoTheDangVien";
-            this.colSoTheDangVien.Name = "colSoTheDangVien";
-            this.colSoTheDangVien.Visible = true;
-            this.colSoTheDangVien.VisibleIndex = 0;
+            this.fieldSoTheDangVien3.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldSoTheDangVien3.AreaIndex = 0;
+            this.fieldSoTheDangVien3.Caption = "Tổng số";
+            this.fieldSoTheDangVien3.FieldName = "SoTheDangVien";
+            this.fieldSoTheDangVien3.Name = "fieldSoTheDangVien3";
+            this.fieldSoTheDangVien3.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
             // 
-            // colHoTen
+            // fieldSoTheDangVien4
             // 
-            this.colHoTen.FieldName = "HoTen";
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Visible = true;
-            this.colHoTen.VisibleIndex = 1;
-            // 
-            // colDanToc
-            // 
-            this.colDanToc.FieldName = "DanToc";
-            this.colDanToc.Name = "colDanToc";
-            this.colDanToc.Visible = true;
-            this.colDanToc.VisibleIndex = 2;
-            // 
-            // colUuTien
-            // 
-            this.colUuTien.FieldName = "UuTien";
-            this.colUuTien.Name = "colUuTien";
-            this.colUuTien.Visible = true;
-            this.colUuTien.VisibleIndex = 3;
-            // 
-            // colNgayVaoDang
-            // 
-            this.colNgayVaoDang.FieldName = "NgayVaoDang";
-            this.colNgayVaoDang.Name = "colNgayVaoDang";
-            this.colNgayVaoDang.Visible = true;
-            this.colNgayVaoDang.VisibleIndex = 4;
+            this.fieldSoTheDangVien4.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldSoTheDangVien4.AreaIndex = 1;
+            this.fieldSoTheDangVien4.Caption = "Tỷ lệ";
+            this.fieldSoTheDangVien4.FieldName = "SoTheDangVien";
+            this.fieldSoTheDangVien4.Name = "fieldSoTheDangVien4";
+            this.fieldSoTheDangVien4.SummaryDisplayType = DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfColumnGrandTotal;
+            this.fieldSoTheDangVien4.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
             // 
             // f_BC_dantocTableAdapter
             // 
             this.f_BC_dantocTableAdapter.ClearBeforeFill = true;
+            // 
+            // f_BC_tongiaoTableAdapter
+            // 
+            this.f_BC_tongiaoTableAdapter.ClearBeforeFill = true;
             // 
             // FrmStatisticalNation
             // 
@@ -394,8 +475,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fBCdantocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Project_QLDVDataSet)).EndInit();
             this.pageReligion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fBCtongiaoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,12 +504,17 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldSoTheDangVien2;
         private DevExpress.XtraPivotGrid.PivotGridField fieldNgayVaoDang3;
         private _Project_QLDVDataSetTableAdapters.f_BC_dantocTableAdapter f_BC_dantocTableAdapter;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colSoTheDangVien;
-        private DevExpress.XtraGrid.Columns.GridColumn colHoTen;
-        private DevExpress.XtraGrid.Columns.GridColumn colDanToc;
-        private DevExpress.XtraGrid.Columns.GridColumn colUuTien;
-        private DevExpress.XtraGrid.Columns.GridColumn colNgayVaoDang;
+        private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl2;
+        private System.Windows.Forms.BindingSource fBCtongiaoBindingSource;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldHoTen1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldNgayVaoDang4;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldSoTheDangVien3;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldSoTheDangVien4;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldTonGiao;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldNgayVaoDang5;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldNgayVaoDang6;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldNgayVaoDang7;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldSoTheDangVien5;
+        private _Project_QLDVDataSetTableAdapters.f_BC_tongiaoTableAdapter f_BC_tongiaoTableAdapter;
     }
 }

@@ -30,14 +30,25 @@ namespace ProjectQuanLyDangVien.Forms
 
         protected override void OnExport()
         {
+            // Mở Form Save File
             SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "Data Files (*.xlsx)|*.xlsx";
+            dlg.Filter = "Data Files (*.xlsx)|*.xlsx"; // Export thành file Excel
             dlg.DefaultExt = "xlsx";
             dlg.AddExtension = true;
             dlg.ShowDialog();
             if (!string.IsNullOrWhiteSpace(dlg.FileName))
             {
-                pivotGridControl1.ExportToXlsx(dlg.FileName);
+                // Export theo tab page
+                switch (xtraTabControl1.SelectedTabPage.Name)
+                {
+                    case "pageNation": // Trang dân tộc
+                        pivotGridControl1.ExportToXlsx(dlg.FileName);
+                        break;
+                    case "pageReligion": // Trang tôn giáo
+                        pivotGridControl2.ExportToXlsx(dlg.FileName);
+                        break;
+                }
+                // Mở tập tin vừa lưu
                 var result = XtraMessageBox.Show("Bạn có muốn mở tập tin vừa lưu không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
@@ -49,7 +60,16 @@ namespace ProjectQuanLyDangVien.Forms
         }
         protected override void OnReload()
         {
-            f_BC_dantocTableAdapter.Fill(_Project_QLDVDataSet.f_BC_dantoc, dateFrom.DateTime, dateTo.DateTime);
+            switch (xtraTabControl1.SelectedTabPage.Name)
+            {
+                case "pageNation": // Trang dân tộc
+                    f_BC_dantocTableAdapter.Fill(_Project_QLDVDataSet.f_BC_dantoc, dateFrom.DateTime, dateTo.DateTime);
+                    break;
+                case "pageReligion": // Trang tôn giáo
+                    f_BC_tongiaoTableAdapter.Fill(_Project_QLDVDataSet.f_BC_tongiao, dateFrom.DateTime, dateTo.DateTime);
+                    break;
+            }
+            
         }
 
         protected override void OnFormLoad()
@@ -61,5 +81,16 @@ namespace ProjectQuanLyDangVien.Forms
             OnReload();
         }
         #endregion
+
+        #region Custom PivotGrid Color
+        private void pivotGridControl1_CustomDrawCell(object sender, DevExpress.XtraPivotGrid.PivotCustomDrawCellEventArgs e)
+        {
+            if(e.RowIndex % 2 == 0)
+            {
+                e.Appearance.BackColor = Color.AliceBlue;
+            }
+        }
+        #endregion
+
     }
 }

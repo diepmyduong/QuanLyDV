@@ -36,6 +36,12 @@ namespace ProjectQuanLyDangVien.Forms
             InitializeComponent();
         }
 
+        private enum _Created
+        {
+            Nation = 0,
+            Religion = 1,
+            City = 2
+        }
         #region Override
         public override void OnFormActive()
         {
@@ -47,6 +53,7 @@ namespace ProjectQuanLyDangVien.Forms
             _frmParent.iSave.Enabled = true;
             _frmParent.iDetail.Enabled = true;
             _frmParent.iFind.Enabled = true;
+            _frmParent.iCreated.Enabled = true;
 
             // Thêm popup menu cho Export
             _frmParent.iExport.ButtonStyle = BarButtonStyle.DropDown;
@@ -59,10 +66,33 @@ namespace ProjectQuanLyDangVien.Forms
             _frmParent.pExportMenu.ClearLinks();
             _frmParent.pExportMenu.AddItem(iExportToPdf);
             _frmParent.pExportMenu.AddItem(iExportToXlsx);
-            
+            // Thêm popup menu cho Created
+            _frmParent.iCreated.ButtonStyle = BarButtonStyle.DropDown;
+                // Tạo danh sách các links liên quan dựa vào Enum Created
+            Dictionary<object, string> createdItemLinks = new Dictionary<object, string>();
+            createdItemLinks.Add(_Created.Nation, "Dân tộc");
+            createdItemLinks.Add(_Created.Religion, "Tôn giáo");
+            createdItemLinks.Add(_Created.City, "Quê quán");
+                // Sử dụng hàm add links vào button Created
+            addItemLinksToCreatedButton(createdItemLinks);
         }
-
-
+        // Thao tác khi các link created được chọn
+        protected override void OnCreatedPopupMenuItemClicked(object tag, string caption)
+        {
+            _Created type = (_Created)Enum.Parse(typeof(_Created), tag.ToString());
+            switch (type)
+            {
+                case _Created.Nation:
+                    _frmParent.openChildFormByName("ProjectQuanLyDangVien.Forms", "FrmSysNation");
+                    break;
+                case _Created.Religion:
+                    _frmParent.openChildFormByName("ProjectQuanLyDangVien.Forms", "FrmSysReligion");
+                    break;
+                case _Created.City:
+                    _frmParent.openChildFormByName("ProjectQuanLyDangVien.Forms", "FrmSysCity");
+                    break;
+            }
+        }
         protected override void OnFind()
         {
             switch (xtraTabControl1.SelectedTabPage.Name)
@@ -167,10 +197,6 @@ namespace ProjectQuanLyDangVien.Forms
         }
         protected override void OnReload()
         {
-            if (!_frmParent.splashScreenManager.IsSplashFormVisible)
-            {
-                _frmParent.splashScreenManager.ShowWaitForm();
-            }
             //Bỏ focus để update dữ liệu
             var tempFocus = gridView1.FocusedRowHandle;
             gridView1.FocusedRowHandle = -1;
@@ -184,6 +210,10 @@ namespace ProjectQuanLyDangVien.Forms
                 {
                     OnSave();
                 }
+            }
+            if (!_frmParent.splashScreenManager.IsSplashFormVisible)
+            {
+                _frmParent.splashScreenManager.ShowWaitForm();
             }
             //Gọi bộ đếm thời gian thực hiện load
             Stopwatch sw = Stopwatch.StartNew();
@@ -293,8 +323,8 @@ namespace ProjectQuanLyDangVien.Forms
         #region Sự kiện chính
         private void FrmMembers_Load_1(object sender, EventArgs e)
         {
-            cbGenger.Items.AddEnum(typeof(Libs.Enums.Genger), true); // Giới tính
-            cbGenger2.Items.AddEnum(typeof(Libs.Enums.Genger), true); // Giới tính
+            cbGenger.Items.AddEnum(typeof(Libs.Enums.Gender), true); // Giới tính
+            cbGenger2.Items.AddEnum(typeof(Libs.Enums.Gender), true); // Giới tính
             OnReload();
         }
             #region Quản lý Tabs
@@ -337,7 +367,7 @@ namespace ProjectQuanLyDangVien.Forms
         private void layoutView1_VisibleRecordIndexChanged(object sender, DevExpress.XtraGrid.Views.Layout.Events.LayoutViewVisibleRecordIndexChangedEventArgs e)
         {
             _currentDangVien = layoutView1.GetDataRow(layoutView1.VisibleRecordIndex) as _Project_QLDVDataSet.tbDangVienRow;
-            if (_currentDangVien != null && _currentDangVien.HinhAnh == null)
+            if (_currentDangVien != null && _currentDangVien.HinhAnh == null && xtraTabControl1.SelectedTabPage.Name != "pageTable")
             {
                 loadPicture();
             }
@@ -441,7 +471,20 @@ namespace ProjectQuanLyDangVien.Forms
 
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
-            OnSave();
+            //OnSave();
+        }
+
+        private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            GridView currentView = sender as GridView;
+            if (e.Column.FieldName == "HoTenKhaiSinh")
+            {
+                var isdead = currentView.GetRowCellValue(e.RowHandle, currentView.Columns.ColumnByFieldName("DaChet"));
+                if(isdead != null && (bool)isdead)
+                { 
+                    e.Appearance.BackColor = Color.Red;
+                }
+            }
         }
     }
 }

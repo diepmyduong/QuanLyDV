@@ -134,6 +134,10 @@ namespace ProjectQuanLyDangVien.Forms
         {
             OnFormLoad();
         }
+        private void iCreatedPopUpMenu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OnCreatedPopupMenuItemClicked(e.Item.Tag,e.Item.Caption);
+        }
         #endregion
         #region Viturl Functions
         protected virtual void OnDetailClick()
@@ -178,7 +182,6 @@ namespace ProjectQuanLyDangVien.Forms
         }
         protected virtual void OnOpen()
         {
-            throw new NotImplementedException();
         }
         protected virtual void OnExport()
         {
@@ -189,6 +192,10 @@ namespace ProjectQuanLyDangVien.Forms
         protected virtual void OnFormLoad()
         {
             _frmParent = this.MdiParent as FormMain;
+        }
+        protected virtual void OnCreatedPopupMenuItemClicked(object tag, string caption)
+        { 
+            
         }
         #endregion
         public string FormTitle
@@ -202,5 +209,18 @@ namespace ProjectQuanLyDangVien.Forms
                 this.lblFormTitle.Text = value;
             }
         }
+
+        protected void addItemLinksToCreatedButton(Dictionary<object,string> itemList)
+        {
+            foreach(var item in itemList)
+            {
+                BarButtonItem buttonItem = new BarButtonItem();
+                buttonItem.Caption = item.Value;
+                buttonItem.Tag = item.Key;
+                buttonItem.ItemClick += iCreatedPopUpMenu_ItemClick;
+                _frmParent.pCreatedMenu.AddItem(buttonItem);
+            }
+        }
+        
     }
 }

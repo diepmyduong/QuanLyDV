@@ -20,9 +20,9 @@ namespace ProjectQuanLyDangVien.Libs
             string formatValue = arg.ToString();
             switch (format)
             {
-                case "genger":
-                    Libs.Enums.Genger genger = (Libs.Enums.Genger)arg;
-                    return Libs.Enumerations.GetEnumDescription(genger);
+                case "gender":
+                    Libs.Enums.Gender gender = (Libs.Enums.Gender)arg;
+                    return Libs.Enumerations.GetEnumDescription(gender);
             }
             return formatValue;
         }

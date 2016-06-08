@@ -429,6 +429,9 @@
   <metadata name="tbSysTonGiaoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 322</value>
   </metadata>
+  <data name="checkBoxIsDead.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="layoutViewCard1.CustomizationFormText" xml:space="preserve">
     <value>TemplateCard</value>
   </data>
@@ -728,7 +731,37 @@
     <value>True</value>
   </data>
   <data name="colGhiChu3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="colDaChet1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colDaChet1.VisibleIndex" type="System.Int32, mscorlib">
     <value>17</value>
+  </data>
+  <data name="colLyDoChet.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colLyDoChet.VisibleIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="colNgayRaKhoiDang.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colNgayRaKhoiDang.VisibleIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="colHinhThucRaDang.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colHinhThucRaDang.VisibleIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="colNgayChet.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colNgayChet.VisibleIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="grTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>877, 470</value>
@@ -860,7 +893,7 @@
     <value>_Project_QLDVDataSet</value>
   </data>
   <data name="&gt;&gt;_Project_QLDVDataSet.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSet, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSet, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbQuaTrinhHoatDongBindingSource.Name" xml:space="preserve">
     <value>tbQuaTrinhHoatDongBindingSource</value>
@@ -1198,6 +1231,24 @@
   <data name="&gt;&gt;layoutViewField_colHocHam1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;colDaChet.Name" xml:space="preserve">
+    <value>colDaChet</value>
+  </data>
+  <data name="&gt;&gt;colDaChet.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;checkBoxIsDead.Name" xml:space="preserve">
+    <value>checkBoxIsDead</value>
+  </data>
+  <data name="&gt;&gt;checkBoxIsDead.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colDaChet.Name" xml:space="preserve">
+    <value>layoutViewField_colDaChet</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colDaChet.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutViewCard1.Name" xml:space="preserve">
     <value>layoutViewCard1</value>
   </data>
@@ -1384,107 +1435,137 @@
   <data name="&gt;&gt;repositoryItemMemoExEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit, DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;colDaChet1.Name" xml:space="preserve">
+    <value>colDaChet1</value>
+  </data>
+  <data name="&gt;&gt;colDaChet1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colLyDoChet.Name" xml:space="preserve">
+    <value>colLyDoChet</value>
+  </data>
+  <data name="&gt;&gt;colLyDoChet.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colNgayRaKhoiDang.Name" xml:space="preserve">
+    <value>colNgayRaKhoiDang</value>
+  </data>
+  <data name="&gt;&gt;colNgayRaKhoiDang.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colHinhThucRaDang.Name" xml:space="preserve">
+    <value>colHinhThucRaDang</value>
+  </data>
+  <data name="&gt;&gt;colHinhThucRaDang.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;tbDangVienTableAdapter.Name" xml:space="preserve">
     <value>tbDangVienTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDangVienTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDangVienTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDangVienTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbQuaTrinhHoatDongTableAdapter.Name" xml:space="preserve">
     <value>tbQuaTrinhHoatDongTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbQuaTrinhHoatDongTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuaTrinhHoatDongTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuaTrinhHoatDongTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbDaoTaoTableAdapter.Name" xml:space="preserve">
     <value>tbDaoTaoTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDaoTaoTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDaoTaoTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDaoTaoTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbKhenThuongTableAdapter.Name" xml:space="preserve">
     <value>tbKhenThuongTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbKhenThuongTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKhenThuongTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKhenThuongTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSoHuyHieuTableAdapter.Name" xml:space="preserve">
     <value>tbSoHuyHieuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSoHuyHieuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSoHuyHieuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSoHuyHieuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbDanhHieuTableAdapter.Name" xml:space="preserve">
     <value>tbDanhHieuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDanhHieuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDanhHieuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDanhHieuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbKyLuatTableAdapter.Name" xml:space="preserve">
     <value>tbKyLuatTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbKyLuatTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKyLuatTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbKyLuatTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbBiTuTableAdapter.Name" xml:space="preserve">
     <value>tbBiTuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbBiTuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbBiTuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbBiTuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbCongViecCheDoCuTableAdapter.Name" xml:space="preserve">
     <value>tbCongViecCheDoCuTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbCongViecCheDoCuTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbCongViecCheDoCuTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbCongViecCheDoCuTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbDiNuocNgoaiTableAdapter.Name" xml:space="preserve">
     <value>tbDiNuocNgoaiTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbDiNuocNgoaiTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDiNuocNgoaiTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDiNuocNgoaiTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbQuanHeNuocNgoaiTableAdapter.Name" xml:space="preserve">
     <value>tbQuanHeNuocNgoaiTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbQuanHeNuocNgoaiTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuanHeNuocNgoaiTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbQuanHeNuocNgoaiTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbThanNhanNuocNgoaiTableAdapter.Name" xml:space="preserve">
     <value>tbThanNhanNuocNgoaiTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbThanNhanNuocNgoaiTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanNuocNgoaiTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanNuocNgoaiTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbThanNhanTableAdapter.Name" xml:space="preserve">
     <value>tbThanNhanTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbThanNhanTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbThanNhanTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbTaiSanTableAdapter.Name" xml:space="preserve">
     <value>tbTaiSanTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbTaiSanTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbTaiSanTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbTaiSanTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSysDanTocTableAdapter.Name" xml:space="preserve">
     <value>tbSysDanTocTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSysDanTocTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysDanTocTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysDanTocTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSysTonGiaoTableAdapter.Name" xml:space="preserve">
     <value>tbSysTonGiaoTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSysTonGiaoTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTonGiaoTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTonGiaoTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tbSysTinhThanhTableAdapter.Name" xml:space="preserve">
     <value>tbSysTinhThanhTableAdapter</value>
   </data>
   <data name="&gt;&gt;tbSysTinhThanhTableAdapter.Type" xml:space="preserve">
-    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTinhThanhTableAdapter, _Project_QLDVDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbSysTinhThanhTableAdapter, _Project_QLDVDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colNgayChet.Name" xml:space="preserve">
+    <value>colNgayChet</value>
+  </data>
+  <data name="&gt;&gt;colNgayChet.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMembers</value>

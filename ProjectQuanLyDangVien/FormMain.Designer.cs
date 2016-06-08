@@ -92,6 +92,8 @@
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.tbDocumentManagerTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDocumentManagerTableAdapter();
             this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ProjectQuanLyDangVien.Forms.FrmWait), true, true);
+            this.iCreated = new DevExpress.XtraBars.BarButtonItem();
+            this.pCreatedMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExportMenu)).BeginInit();
@@ -109,6 +111,7 @@
             this.pnNavBar.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCreatedMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -150,9 +153,10 @@
             this.iReportDesigner,
             this.iDetail,
             this.lblSearchForm,
-            this.iSetting});
+            this.iSetting,
+            this.iCreated});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
-            this.ribbonControl.MaxItemId = 7;
+            this.ribbonControl.MaxItemId = 8;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -541,7 +545,6 @@
             // lblSearchForm
             // 
             resources.ApplyResources(this.lblSearchForm, "lblSearchForm");
-            this.lblSearchForm.Glyph = ((System.Drawing.Image)(resources.GetObject("lblSearchForm.Glyph")));
             this.lblSearchForm.Id = 5;
             this.lblSearchForm.Name = "lblSearchForm";
             this.lblSearchForm.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -554,6 +557,16 @@
             this.iSetting.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("iSetting.LargeGlyph")));
             this.iSetting.Name = "iSetting";
             this.iSetting.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSetting_ItemClick);
+            // 
+            // iCreated
+            // 
+            resources.ApplyResources(this.iCreated, "iCreated");
+            this.iCreated.DropDownControl = this.pCreatedMenu;
+            this.iCreated.Enabled = false;
+            this.iCreated.Glyph = ((System.Drawing.Image)(resources.GetObject("iCreated.Glyph")));
+            this.iCreated.Id = 7;
+            this.iCreated.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("iCreated.LargeGlyph")));
+            this.iCreated.Name = "iCreated";
             // 
             // ribbonImageCollectionLarge
             // 
@@ -605,6 +618,7 @@
             this.toolsRibbonPageGroup.ItemLinks.Add(this.iNew);
             this.toolsRibbonPageGroup.ItemLinks.Add(this.iDelete);
             this.toolsRibbonPageGroup.ItemLinks.Add(this.iSave);
+            this.toolsRibbonPageGroup.ItemLinks.Add(this.iCreated);
             this.toolsRibbonPageGroup.ItemLinks.Add(this.lblSearchForm);
             this.toolsRibbonPageGroup.ItemLinks.Add(this.iSearchForm);
             this.toolsRibbonPageGroup.Name = "toolsRibbonPageGroup";
@@ -705,6 +719,12 @@
             // splashScreenManager
             // 
             this.splashScreenManager.ClosingDelay = 500;
+            
+            // 
+            // pCreatedMenu
+            // 
+            this.pCreatedMenu.Name = "pCreatedMenu";
+            this.pCreatedMenu.Ribbon = this.ribbonControl;
             // 
             // FormMain
             // 
@@ -738,6 +758,7 @@
             this.pnNavBar.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCreatedMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -806,5 +827,7 @@
         public DevExpress.XtraBars.PopupMenu pExportMenu;
         private DevExpress.XtraBars.BarStaticItem lblSearchForm;
         public DevExpress.XtraBars.BarButtonItem iSetting;
+        public DevExpress.XtraBars.BarButtonItem iCreated;
+        public DevExpress.XtraBars.PopupMenu pCreatedMenu;
     }
 }
