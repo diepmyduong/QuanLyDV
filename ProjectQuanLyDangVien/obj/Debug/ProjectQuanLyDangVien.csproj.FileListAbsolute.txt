@@ -398,3 +398,4 @@ E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyD
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\vi-VN\ProjectQuanLyDangVien.resources.dll
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.exe
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.pdb
+E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmStatisticalNation.resources
