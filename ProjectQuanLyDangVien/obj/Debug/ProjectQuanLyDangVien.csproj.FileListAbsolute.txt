@@ -399,3 +399,6 @@ E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyD
 E:\VIEN\Dropbox\STUDY\C#\QuanLyDV\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.pdb
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmStatisticalNation.resources
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmSysNation.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmSysReligion.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProjectQuanLyDangVien\ProjectQuanLyDangVien\obj\Debug\ProjectQuanLyDangVien.Forms.FrmSysCity.resources

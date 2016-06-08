@@ -8017,6 +8017,7 @@ namespace ProjectQuanLyDangVien {
                 this.columnMaDanToc.MaxLength = 50;
                 this.columnTenDanToc.MaxLength = 50;
                 this.columnDienGiai.MaxLength = 2147483647;
+                this.columnUuTien.DefaultValue = ((int)(0));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8320,6 +8321,7 @@ namespace ProjectQuanLyDangVien {
                 this.columnMaTonGiao.MaxLength = 50;
                 this.columnTenTonGiao.MaxLength = 50;
                 this.columnDienGiai.MaxLength = 2147483647;
+                this.columnUuTien.DefaultValue = ((int)(0));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8653,6 +8655,7 @@ namespace ProjectQuanLyDangVien {
                 this.columnBienSoXe.MaxLength = 50;
                 this.columnMaDienThoai.MaxLength = 50;
                 this.columnDienGiai.MaxLength = 2147483647;
+                this.columnUuTien.DefaultValue = ((int)(0));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

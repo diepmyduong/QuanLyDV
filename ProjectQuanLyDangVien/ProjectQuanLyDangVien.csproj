@@ -153,6 +153,24 @@
     <Compile Include="Forms\FrmStatisticalNation.Designer.cs">
       <DependentUpon>FrmStatisticalNation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmSysCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSysCity.Designer.cs">
+      <DependentUpon>FrmSysCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSysNation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSysNation.Designer.cs">
+      <DependentUpon>FrmSysNation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSysReligion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSysReligion.Designer.cs">
+      <DependentUpon>FrmSysReligion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Languages\VietNamese.cs" />
     <Compile Include="Libs\CustomFormatProvider.cs" />
     <Compile Include="Libs\Enums.cs" />
@@ -212,6 +230,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmStatisticalNation.resx">
       <DependentUpon>FrmStatisticalNation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSysCity.resx">
+      <DependentUpon>FrmSysCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSysNation.resx">
+      <DependentUpon>FrmSysNation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSysReligion.resx">
+      <DependentUpon>FrmSysReligion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

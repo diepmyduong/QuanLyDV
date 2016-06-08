@@ -36,6 +36,12 @@ namespace ProjectQuanLyDangVien.Forms
             InitializeComponent();
         }
 
+        private enum _Created
+        {
+            Nation = 0,
+            Religion = 1,
+            City = 2
+        }
         #region Override
         public override void OnFormActive()
         {
@@ -47,6 +53,7 @@ namespace ProjectQuanLyDangVien.Forms
             _frmParent.iSave.Enabled = true;
             _frmParent.iDetail.Enabled = true;
             _frmParent.iFind.Enabled = true;
+            _frmParent.iCreated.Enabled = true;
 
             // Thêm popup menu cho Export
             _frmParent.iExport.ButtonStyle = BarButtonStyle.DropDown;
@@ -59,10 +66,33 @@ namespace ProjectQuanLyDangVien.Forms
             _frmParent.pExportMenu.ClearLinks();
             _frmParent.pExportMenu.AddItem(iExportToPdf);
             _frmParent.pExportMenu.AddItem(iExportToXlsx);
-            
+            // Thêm popup menu cho Created
+            _frmParent.iCreated.ButtonStyle = BarButtonStyle.DropDown;
+                // Tạo danh sách các links liên quan dựa vào Enum Created
+            Dictionary<object, string> createdItemLinks = new Dictionary<object, string>();
+            createdItemLinks.Add(_Created.Nation, "Dân tộc");
+            createdItemLinks.Add(_Created.Religion, "Tôn giáo");
+            createdItemLinks.Add(_Created.City, "Quê quán");
+                // Sử dụng hàm add links vào button Created
+            addItemLinksToCreatedButton(createdItemLinks);
         }
-
-
+        // Thao tác khi các link created được chọn
+        protected override void OnCreatedPopupMenuItemClicked(object tag, string caption)
+        {
+            _Created type = (_Created)Enum.Parse(typeof(_Created), tag.ToString());
+            switch (type)
+            {
+                case _Created.Nation:
+                    _frmParent.openChildFormByName("ProjectQuanLyDangVien.Forms", "FrmSysNation");
+                    break;
+                case _Created.Religion:
+                    _frmParent.openChildFormByName("ProjectQuanLyDangVien.Forms", "FrmSysReligion");
+                    break;
+                case _Created.City:
+                    _frmParent.openChildFormByName("ProjectQuanLyDangVien.Forms", "FrmSysCity");
+                    break;
+            }
+        }
         protected override void OnFind()
         {
             switch (xtraTabControl1.SelectedTabPage.Name)
