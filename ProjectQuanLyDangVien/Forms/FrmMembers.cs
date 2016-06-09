@@ -225,7 +225,10 @@ namespace ProjectQuanLyDangVien.Forms
             // Lưu lại đảng viên hiện tại đang thao tác
             _currentDangVien = layoutView1.GetDataRow(layoutView1.VisibleRecordIndex) as _Project_QLDVDataSet.tbDangVienRow;
             //Gọi thread load hình ảnh
-            loadPicture();
+            if(_currentDangVien != null && _currentDangVien.HinhAnh == null)
+            {
+                loadPicture();
+            }
             sw.Stop(); //ngững đồng hồ đếm và thông báo thời gian thực hiện
             _frmParent.setFormStatus(string.Format("Time taken: {0}ms", sw.Elapsed.TotalMilliseconds));
             if (_frmParent.splashScreenManager.IsSplashFormVisible)

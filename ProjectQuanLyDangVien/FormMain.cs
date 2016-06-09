@@ -59,7 +59,6 @@ namespace ProjectQuanLyDangVien
         {
             setFormStatus("Disable all bar button");
             this.iExport.Enabled = false;
-            this.iOpen.Enabled = false;
             this.iClose.Enabled = false;
             this.iFind.Enabled = false;
             this.iSave.Enabled = false;
@@ -160,6 +159,22 @@ namespace ProjectQuanLyDangVien
             else f.Activate();
             if (splashScreenManager.IsSplashFormVisible) splashScreenManager.CloseWaitForm();
         }
+        public void openChildFormByForm(FormBase childForm)
+        {
+            if (!splashScreenManager.IsSplashFormVisible) splashScreenManager.ShowWaitForm();
+            Form f = getChildFormByName(childForm.Name);
+            if(f == null)
+            {
+                childForm.MdiParent = this;
+                childForm.Show();
+                childForm.Activate();
+            }
+            else
+            {
+                f.Activate();
+            }
+            if (splashScreenManager.IsSplashFormVisible) splashScreenManager.CloseWaitForm();
+        }
         public void openDetailForm(_Project_QLDVDataSet.tbDangVienRow member)
         {
             splashScreenManager.ShowWaitForm();
@@ -235,9 +250,29 @@ namespace ProjectQuanLyDangVien
         {
             pnNavBar.Show();
         }
+        private void iOpen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Data Files (*.xlsx; *.xls)|*.xlsx;*.xls"; // open file Excel
+            dialog.ShowDialog();
+            if (!string.IsNullOrEmpty(dialog.FileName))
+            {
+                FrmImport formImport = new FrmImport();
+                formImport.FilePath = dialog.FileName;
+                // Kiểm tra Form đã active chưa?
+                Form activatedForm = getChildFormByName(formImport.Name);
+                if(activatedForm != null)
+                {
+                    activatedForm.Dispose();
+                    activatedForm.Close();
+                }
+                openChildFormByForm(formImport);
+            }
+        }
         private void iSetting_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openChildFormByName("ProjectQuanLyDangVien.Forms", "FrmSettingGenaral");
+            FrmSettingGenaral form = new FrmSettingGenaral();
+            openChildFormByForm(form);
         }
         private void iReportDesigner_ItemClick(object sender, ItemClickEventArgs e)
         {

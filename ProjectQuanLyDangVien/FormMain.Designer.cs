@@ -74,6 +74,8 @@
             this.iDetail = new DevExpress.XtraBars.BarButtonItem();
             this.lblSearchForm = new DevExpress.XtraBars.BarStaticItem();
             this.iSetting = new DevExpress.XtraBars.BarButtonItem();
+            this.iCreated = new DevExpress.XtraBars.BarButtonItem();
+            this.pCreatedMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -92,8 +94,6 @@
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.tbDocumentManagerTableAdapter = new ProjectQuanLyDangVien._Project_QLDVDataSetTableAdapters.tbDocumentManagerTableAdapter();
             this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ProjectQuanLyDangVien.Forms.FrmWait), true, true);
-            this.iCreated = new DevExpress.XtraBars.BarButtonItem();
-            this.pCreatedMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExportMenu)).BeginInit();
@@ -104,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbDocumentManagerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Project_QLDVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCreatedMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -111,7 +112,6 @@
             this.pnNavBar.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCreatedMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -204,12 +204,12 @@
             // iOpen
             // 
             resources.ApplyResources(this.iOpen, "iOpen");
-            this.iOpen.Enabled = false;
             this.iOpen.Id = 2;
             this.iOpen.ImageIndex = 1;
             this.iOpen.LargeImageIndex = 1;
             this.iOpen.Name = "iOpen";
             this.iOpen.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.iOpen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iOpen_ItemClick);
             // 
             // iSave
             // 
@@ -568,6 +568,11 @@
             this.iCreated.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("iCreated.LargeGlyph")));
             this.iCreated.Name = "iCreated";
             // 
+            // pCreatedMenu
+            // 
+            this.pCreatedMenu.Name = "pCreatedMenu";
+            this.pCreatedMenu.Ribbon = this.ribbonControl;
+            // 
             // ribbonImageCollectionLarge
             // 
             resources.ApplyResources(this.ribbonImageCollectionLarge, "ribbonImageCollectionLarge");
@@ -719,12 +724,6 @@
             // splashScreenManager
             // 
             this.splashScreenManager.ClosingDelay = 500;
-            
-            // 
-            // pCreatedMenu
-            // 
-            this.pCreatedMenu.Name = "pCreatedMenu";
-            this.pCreatedMenu.Ribbon = this.ribbonControl;
             // 
             // FormMain
             // 
@@ -751,6 +750,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbDocumentManagerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Project_QLDVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCreatedMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
@@ -758,7 +758,6 @@
             this.pnNavBar.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pCreatedMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
